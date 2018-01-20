@@ -19,17 +19,14 @@ import org.json.JSONArray;
 
 public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessageCallback {
 
-    private EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfc);
-        mEditText = (EditText) findViewById(R.id.edit_text_field);
 
         NfcAdapter mAdapter = NfcAdapter.getDefaultAdapter(this);
         if (mAdapter == null) {
-            mEditText.setText("Sorry this device does not have NFC.");
             return;
         }
         if (!mAdapter.isEnabled()) {
@@ -38,17 +35,6 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
 
         mAdapter.setNdefPushMessageCallback(this, this);
 
-
-//        //example of getting individual items from the output
-//        try {
-//            //String jsonoutput = menu.getString("ccnum");
-//            //Log.w("test string output", jsonoutput);
-//            JSONArray jsonoutput = menu.getJSONArray("food");
-//            String food = (String) jsonoutput.get(0);
-//            //String food = (String) jsonoutput.get(1);
-//            Log.w("test string output", food);
-//        }
-//        catch(JSONException e){Log.w("error", "errormsg");}
     }
 
     /**

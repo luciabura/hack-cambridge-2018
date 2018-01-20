@@ -9,6 +9,7 @@ import android.os.Parcelable;
 import android.widget.TextView;
 import android.util.Log;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -46,7 +47,12 @@ public class NFCDisplayActivity extends Activity {
             //CONVERT THE JSON TEXT INTO A JSON OBJECT
             try {
                 JSONObject menu = new JSONObject(recvd_string);
-                Log.w("JSON output received and loaded", menu.toString(4));
+                Log.w("JSON output received and loaded", menu.toString());
+                //example of unpacking data
+//                String ccnum = menu.getString("ccnum");
+//                JSONArray jsonoutput = menu.getJSONArray("food");
+//                String food = (String) jsonoutput.get(0);
+//                Log.w("test string output", food);
             } catch (JSONException e) {
             }
 
@@ -58,6 +64,7 @@ public class NFCDisplayActivity extends Activity {
 //                    }
 //                }
 //            }
+
 
         } else
             mTextView.setText("Waiting for NDEF Message");

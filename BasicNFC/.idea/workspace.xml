@@ -40,8 +40,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NFCDisplayActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NFCDisplayActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCDisplayActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state relative-caret-position="208">
+              <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NFCActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NFCActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+            <state relative-caret-position="202">
+              <caret line="43" column="7" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,13 +133,16 @@
         <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
-                <marker date="1516487057988" expanded="true" signature="683:714" ph="..." />
-                <marker date="1516487057988" expanded="true" signature="683:1016" ph="..." />
-                <marker date="1516487057988" expanded="true" signature="1035:1439" ph="..." />
-                <marker date="1516487057988" expanded="true" signature="1086:1439" ph="..." />
-                <marker date="1516487057988" expanded="true" signature="1460:1548" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="651:682" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="651:984" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="788:964" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="1003:1407" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="1054:1407" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="1148:1387" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="1428:1516" ph="..." />
+                <marker date="1516488466105" expanded="true" signature="1536:1640" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1892,10 +1895,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_nfc.xml" />
         <option value="$USER_HOME$/Library/Android/sdk/platforms/android-26/android.jar!/android/nfc/NfcAdapter.class" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_nfc.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCDisplayActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCActivity.java" />
       </list>
     </option>
   </component>
@@ -2101,7 +2104,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516487315958" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516488507179" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2148,7 +2151,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516487315958" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516488507179" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2330,7 +2333,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516487315960" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516488507181" />
       </method>
     </configuration>
     <list size="1">
@@ -2481,11 +2484,14 @@
         <state relative-caret-position="315">
           <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
-            <marker date="1516487057988" expanded="true" signature="683:714" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="683:1016" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1035:1439" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1086:1439" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1460:1548" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="651:682" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="651:984" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="788:964" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1003:1407" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1054:1407" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1148:1387" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1428:1516" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1536:1640" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2564,11 +2570,14 @@
         <state relative-caret-position="315">
           <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
           <folding>
-            <marker date="1516487057988" expanded="true" signature="683:714" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="683:1016" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1035:1439" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1086:1439" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1460:1548" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="651:682" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="651:984" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="788:964" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1003:1407" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1054:1407" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1148:1387" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1428:1516" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1536:1640" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2637,13 +2646,16 @@
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
-            <marker date="1516487057988" expanded="true" signature="683:714" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="683:1016" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1035:1439" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1086:1439" ph="..." />
-            <marker date="1516487057988" expanded="true" signature="1460:1548" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="651:682" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="651:984" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="788:964" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1003:1407" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1054:1407" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1148:1387" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1428:1516" ph="..." />
+            <marker date="1516488466105" expanded="true" signature="1536:1640" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2689,6 +2701,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-26/android.jar!/android/nfc/NfcAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nfc_display.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2700,39 +2720,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nfc.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCDisplayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-26/android.jar!/android/nfc/NfcAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        <state relative-caret-position="208">
+          <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCDisplayActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nfc.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/dom/basicnfc/NFCActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="43" column="7" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

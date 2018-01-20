@@ -7,6 +7,7 @@ import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.TextView;
+import android.util.Log;
 
 /**
  * Created by mshrestha on 7/23/2014.
@@ -22,6 +23,9 @@ public class NFCDisplayActivity extends Activity {
         mTextView = (TextView) findViewById(R.id.text_view);
     }
 
+    /*
+    MESSAGE GETS RECEIVED AND RECEIVING TEXT BOX UPDATED
+     */
     @Override
     protected void onResume(){
         super.onResume();
@@ -32,6 +36,7 @@ public class NFCDisplayActivity extends Activity {
 
             NdefMessage message = (NdefMessage) rawMessages[0]; // only one message transferred
             mTextView.setText(new String(message.getRecords()[0].getPayload()));
+            Log.w("Message received", new String(message.getRecords()[0].getPayload()));
 
         } else
             mTextView.setText("Waiting for NDEF Message");

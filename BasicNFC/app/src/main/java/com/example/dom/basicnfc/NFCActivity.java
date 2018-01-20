@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.util.Log;
 
 
 public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessageCallback {
@@ -37,7 +38,7 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
     }
 
     /**
-     * Ndef Record that will be sent over via NFC
+     * Ndef Record that will be sent over via NFC. MESSAGE GETS SET UP HERE.
      * @param nfcEvent
      * @return
      */
@@ -46,6 +47,7 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
         String message = mEditText.getText().toString();
         NdefRecord ndefRecord = NdefRecord.createMime("text/plain", message.getBytes());
         NdefMessage ndefMessage = new NdefMessage(ndefRecord);
+        Log.w("Within NFC Range", message);
         return ndefMessage;
     }
 }

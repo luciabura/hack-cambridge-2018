@@ -7,10 +7,12 @@ package com.example.dom.basicnfc;
 public class Model {
     String name;
     double price;
+    boolean checked;
 
     Model(String name, double price){
         this.name = name;
         this.price = price;
+        this.checked = false;
     }
     public String getName(){
         return this.name;

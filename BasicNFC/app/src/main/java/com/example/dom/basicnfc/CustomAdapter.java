@@ -36,10 +36,13 @@ public class CustomAdapter extends ArrayAdapter {
         TextView name = convertView.findViewById(R.id.title);
         TextView price = convertView.findViewById(R.id.price);
         CheckBox cb = convertView.findViewById(R.id.checkBox1);
+
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                Model menuItem = (Model) buttonView.getTag();
+                menuItem.checked = buttonView.isChecked();
                 //updateTotal(buttonView);
                 View v = (View) buttonView.getParent();
                 if (isChecked) {
@@ -55,6 +58,8 @@ public class CustomAdapter extends ArrayAdapter {
             @Override
             public void onClick(final View v) {
                 CheckBox cb = v.findViewById(R.id.checkBox1);
+                Model menuItem = (Model) cb.getTag();
+                menuItem.checked = cb.isChecked();
                 cb.setChecked(!cb.isChecked());
                 //updateTotal(cb);
                 if (cb.isChecked()) {

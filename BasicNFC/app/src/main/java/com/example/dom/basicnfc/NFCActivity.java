@@ -37,6 +37,8 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
     NfcAdapter mAdapter;
     PendingIntent myPendingIntent;
 
+    CustomAdapter adapterRef;
+
     /* Gets called only when the app first starts */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,7 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
                 JSONArray foodlist = new JSONArray();
                 foodlist.put("fish");
                 foodlist.put("bread");
-                foodlist.put("otherfood");
+                foodlist.put("testtest");
                 JSONArray pricelist = new JSONArray();
                 pricelist.put(7.90);
                 pricelist.put(8.87);
@@ -104,6 +106,26 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
     @Override
     public NdefMessage createNdefMessage(NfcEvent nfcEvent) {
         //Update what the menu says here.
+
+        if (adapterRef != null) {
+            try {
+                menu = new JSONObject();
+                JSONArray nameList = new JSONArray();
+                JSONArray priceList = new JSONArray();
+                for (int i = 0; i < adapterRef.modelItems.length; i++) {
+                    Model modelItem = adapterRef.modelItems[i];
+                    if (modelItem.checked) {
+                        nameList.put(modelItem.name);
+                         priceList.put(modelItem.price);
+                    }
+                }
+                menu.put("food", nameList);
+                menu.put("price", priceList);
+                menu.put("ccnum", JSONObject.NULL);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
 
         NdefRecord ndefRecord = NdefRecord.createMime("text/plain", menu.toString().getBytes());
         NdefMessage ndefMessage = new NdefMessage(ndefRecord);
@@ -166,6 +188,7 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
         NFCActivity obj = new NFCActivity();
         CustomAdapter adapter = new CustomAdapter(this, menuItems, obj);
         listView.setAdapter(adapter); //FIX THIS LINE
+        adapterRef = adapter;
         total_text = findViewById(R.id.total);
         Button button = findViewById(R.id.button);
 

@@ -20,9 +20,9 @@ public class CustomAdapter extends ArrayAdapter {
 
     Model[] modelItems = null;
     Context context;
-    NFCDisplayActivity main;
+    NFCActivity main;
 
-    public CustomAdapter(Context context, Model[] resource, NFCDisplayActivity main) {
+    public CustomAdapter(Context context, Model[] resource, NFCActivity main) {
         super(context, R.layout.row, resource);
         this.context = context;
         this.modelItems = resource;
@@ -71,15 +71,5 @@ public class CustomAdapter extends ArrayAdapter {
         cb.setTag(modelItems[position]);
         return convertView;
     }
-
-//    public void updateTotal(CompoundButton buttonView) {
-//        Model item = (Model) buttonView.getTag();
-//        if (buttonView.isChecked()) {
-//            main.totalPrice += item.price;
-//        } else {
-//            main.totalPrice -= item.price;
-//        }
-//        main.updateTotal();
-//    }
 
 }

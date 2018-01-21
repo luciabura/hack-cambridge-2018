@@ -40,7 +40,7 @@ public class CustomAdapter extends ArrayAdapter {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                updateTotal(buttonView);
+                //updateTotal(buttonView);
                 View v = (View) buttonView.getParent();
                 if (isChecked) {
                     v.setBackgroundColor(Color.parseColor("#a3c6ff"));
@@ -72,14 +72,14 @@ public class CustomAdapter extends ArrayAdapter {
         return convertView;
     }
 
-    public void updateTotal(CompoundButton buttonView) {
-        Model item = (Model) buttonView.getTag();
-        if (buttonView.isChecked()) {
-            main.totalPrice += item.price;
-        } else {
-            main.totalPrice -= item.price;
-        }
-        main.updateTotal();
-    }
+//    public void updateTotal(CompoundButton buttonView) {
+//        Model item = (Model) buttonView.getTag();
+//        if (buttonView.isChecked()) {
+//            main.totalPrice += item.price;
+//        } else {
+//            main.totalPrice -= item.price;
+//        }
+//        main.updateTotal();
+//    }
 
 }

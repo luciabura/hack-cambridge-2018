@@ -12,7 +12,6 @@ public class Model {
     Model(String name, double price){
         this.name = name;
         this.price = price;
-        this.checked = false;
     }
     public String getName(){
         return this.name;

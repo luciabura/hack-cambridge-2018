@@ -20,13 +20,22 @@ public class CustomAdapter extends ArrayAdapter {
 
     Model[] modelItems = null;
     Context context;
-    NFCActivity main;
+    NFCDisplayActivity main;
 
-    public CustomAdapter(Context context, Model[] resource, NFCActivity main) {
+    public CustomAdapter(Context context, Model[] resource, NFCDisplayActivity main) {
         super(context, R.layout.row, resource);
         this.context = context;
         this.modelItems = resource;
         this.main = main;
+    }
+
+    static CustomAdapter me;
+
+    public static CustomAdapter getInstance() {
+        if (me == null) {
+            System.out.println("error");
+        }
+        return me;
     }
 
     @Override
@@ -36,13 +45,10 @@ public class CustomAdapter extends ArrayAdapter {
         TextView name = convertView.findViewById(R.id.title);
         TextView price = convertView.findViewById(R.id.price);
         CheckBox cb = convertView.findViewById(R.id.checkBox1);
-
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Model menuItem = (Model) buttonView.getTag();
-                menuItem.checked = buttonView.isChecked();
                 //updateTotal(buttonView);
                 View v = (View) buttonView.getParent();
                 if (isChecked) {
@@ -58,8 +64,6 @@ public class CustomAdapter extends ArrayAdapter {
             @Override
             public void onClick(final View v) {
                 CheckBox cb = v.findViewById(R.id.checkBox1);
-                Model menuItem = (Model) cb.getTag();
-                menuItem.checked = cb.isChecked();
                 cb.setChecked(!cb.isChecked());
                 //updateTotal(cb);
                 if (cb.isChecked()) {
@@ -76,5 +80,16 @@ public class CustomAdapter extends ArrayAdapter {
         cb.setTag(modelItems[position]);
         return convertView;
     }
+
+//    public void updateTotal(CompoundButton buttonView) {
+//        Model item = (Model) buttonView.getTag();
+//        item.checked = buttonView.isChecked();
+//        if (buttonView.isChecked()) {
+//            main.totalPrice += item.price;
+//        } else {
+//            main.totalPrice -= item.price;
+//        }
+//        main.updateTotal();
+//    }
 
 }

@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.util.Log;
+import android.app.PendingIntent;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,25 +34,25 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
     protected TextView total_text;
 
     JSONObject menu = new JSONObject();
+    NfcAdapter mAdapter;
+    PendingIntent myPendingIntent;
 
     /* Gets called only when the app first starts */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc);
+        mAdapter = NfcAdapter.getDefaultAdapter(this);
+        myPendingIntent = PendingIntent.getActivity(
+                this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
+        if (mAdapter == null) {
+            return;
+        }
+        if (!mAdapter.isEnabled()) {
+            Toast.makeText(this, "Please enable NFC via Settings.", Toast.LENGTH_LONG).show(); //a little popup window
+        }
+        mAdapter.setNdefPushMessageCallback(this, this);
+
         if(ISHOST == 1) {
-            setContentView(R.layout.activity_nfc);
-            NfcAdapter mAdapter = NfcAdapter.getDefaultAdapter(this);
-            if (mAdapter == null) {
-                return;
-            }
-            if (!mAdapter.isEnabled()) {
-                Toast.makeText(this, "Please enable NFC via Settings.", Toast.LENGTH_LONG).show(); //a little popup window
-            }
-
-            mAdapter.setNdefPushMessageCallback(this, this);
-
-            super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_nfc);
 
             //Initial JSON Object loaded onto the bill/menu
@@ -97,7 +98,7 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
 
 
     /*
-     * Called whenever device comes near another device (within NFC range).
+     * Called whenever Android Beam is invoked (device comes near another NFC Device)
      * NdefMessage and NdefRecord get set up here. NdefRecord will be sent over via NFC.
      */
     @Override
@@ -114,7 +115,9 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
     /* This is where the JSON object gets received and the receiving table updated */
     @Override
     protected void onResume(){
+        Log.w("Here", "Here");
         super.onResume();
+        mAdapter.enableForegroundDispatch(this, myPendingIntent, null, null);
         Intent intent = getIntent();
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())) {
 

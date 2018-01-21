@@ -27,9 +27,6 @@ import android.view.View;
 public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessageCallback {
 
 
-    protected TextView total_text;
-
-    protected double totalPrice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,64 +45,22 @@ public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessag
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfc);
-        Model[] menuItems = new Model[11];
-        menuItems[0] = new Model("Pizza", 7.99);
-        menuItems[1] = new Model("Burger", 9.99);
-        menuItems[2] = new Model("Coke", 1.99);
-        menuItems[3] = new Model("Burger", 9.99);
-        menuItems[4] = new Model("Coke", 1.99);
-        menuItems[5] = new Model("Burger", 9.99);
-        menuItems[6] = new Model("Coke", 1.99);
-        menuItems[7] = new Model("Burger", 9.99);
-        menuItems[8] = new Model("Coke", 1.99);
-        menuItems[9] = new Model("Burger", 9.99);
-        menuItems[10] = new Model("Coke", 1.99);
-        populateList(menuItems);
+//        Model[] menuItems = new Model[11];
+//        menuItems[0] = new Model("Pizza", 7.99);
+//        menuItems[1] = new Model("Burger", 9.99);
+//        menuItems[2] = new Model("Coke", 1.99);
+//        menuItems[3] = new Model("Burger", 9.99);
+//        menuItems[4] = new Model("Coke", 1.99);
+//        menuItems[5] = new Model("Burger", 9.99);
+//        menuItems[6] = new Model("Coke", 1.99);
+//        menuItems[7] = new Model("Burger", 9.99);
+//        menuItems[8] = new Model("Coke", 1.99);
+//        menuItems[9] = new Model("Burger", 9.99);
+//        menuItems[10] = new Model("Coke", 1.99);
+//        populateList(menuItems);
 
     }
 
-    protected void populateList(Model[] menuItems) {
-
-        ListView listView = findViewById(R.id.recipe_list_view);
-
-        CustomAdapter adapter = new CustomAdapter(this, menuItems, this);
-
-        listView.setAdapter(adapter);
-
-        total_text = findViewById(R.id.total);
-
-        Button button = findViewById(R.id.button);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog alertDialog = new AlertDialog.Builder(NFCActivity.this).create();
-                alertDialog.setTitle("Would you like to add a tip?");
-                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
-                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Add selected amount",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
-                alertDialog.show();
-            }
-        });
-
-    }
-
-    public void updateTotal() {
-        if (totalPrice < 0) {
-            totalPrice = 0;
-        }
-        DecimalFormat df = new DecimalFormat("0.00");
-        total_text.setText("Total: £" + df.format(totalPrice));
-    }
 
     /**
      * Ndef Record that will be sent over via NFC. MESSAGE GETS SET UP HERE.

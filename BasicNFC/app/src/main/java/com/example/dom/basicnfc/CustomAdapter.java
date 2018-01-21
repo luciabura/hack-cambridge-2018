@@ -20,9 +20,9 @@ public class CustomAdapter extends ArrayAdapter {
 
     Model[] modelItems = null;
     Context context;
-    NFCActivity main;
+    NFCDisplayActivity main;
 
-    public CustomAdapter(Context context, Model[] resource, NFCActivity main) {
+    public CustomAdapter(Context context, Model[] resource, NFCDisplayActivity main) {
         super(context, R.layout.row, resource);
         this.context = context;
         this.modelItems = resource;
